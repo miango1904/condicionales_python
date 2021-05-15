@@ -112,6 +112,8 @@ def ej3():
     #       --> En caso afirmativo imprima en pantalla "Resp=3"
     #       --> En caso negativo imprima en pantalla "Resp=4"
     if not numero_1 > 5 and numero_2 > 5:
+        # OJO ACÁ! porque not numero_1 te devuelve "False", te lo pasa a booleano y False siempre va a ser menor a 5 porque es equivalente a cero.
+        # en esa línea solo basta con hacer --> if numero_1 < 5  and numero_2 > 5:
         print('resp 3')
     else:
         print('resp 4')
@@ -136,9 +138,23 @@ def ej3():
         print ('D')
     if puntaje < 60:
         print('F')
+    # Qué pasa si el puntaje del alumno es 69?
+    # Y si es 90 o más, fijate que imprime 'A', 'B' y 'C' porque 90 >= 80 entonces imprime 'B', lo mismo pasa con 'C'
+    # Para que no te pase esto tenes que usarlos anidados, es decir, con 'elif' de esa manera va a escapar a los demas condicionales, así:
+    
+    # puntaje = 91
 
-
-
+    # if puntaje >= 90:
+    # print('A')
+    # elif puntaje >= 80:
+    # print('B')
+    # elif puntaje >= 70:
+    # print('C')
+    # elif puntaje >= 60 and puntaje <= 69:
+    # print ('D')
+    # elif puntaje < 60:
+    # print('F')
+    
 
 def ej4():
     # Ejemplos variables de texto
